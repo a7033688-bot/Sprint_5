@@ -1,10 +1,12 @@
 from locators import Locator
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from constant import url, login_endpoint
+from data import email, password
 
 
 class TestLogout:
-    def test_logout(self,driver,url,email,password):
+    def test_logout(self,driver):
         wait = WebDriverWait(driver, 10)
         driver.get(url)
         driver.find_element(*Locator.button_for_logging_into_account).click()
@@ -30,4 +32,4 @@ class TestLogout:
         element.click()
         wait.until(EC.visibility_of_element_located((Locator.click_login_button_in_login_form)))
         current_url = driver.current_url
-        assert current_url == 'https://qa-stellarburgers.education-services.ru/login'
+        assert current_url == url + login_endpoint

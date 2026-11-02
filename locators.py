@@ -20,6 +20,4 @@ class Locator:
     bun_button_in_constructor = (By.XPATH, ".//span[text()='Булки']/parent::div") # кнопка булка в конструкторе
     souces_button_in_constructor = (By.XPATH, ".//span[text()='Соусы']/parent::div") #кнопка соусы в конструкторе
     filling_button_in_constructor = (By.XPATH, ".//span[text()='Начинки']/parent::div") # кнопка начинки в конструкторе
-    heading_bun = (By.XPATH,'.//h2[text()="Булки"]') # заголовок булки
-    heading_souces = (By.XPATH,'.//h2[text()="Соусы"]') # заголовок соусы
-    heading_filling = (By.XPATH,'.//h2[text()="Начинки"]') # заголовок начинки
+    
